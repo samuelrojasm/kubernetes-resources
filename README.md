@@ -1,13 +1,20 @@
 # Kubernetes Resources
+- Este repositorio contiene recursos y herramientas para trabajar con **Kubernetes**, incluyendo **scripts**, **manifiestos**, **plantillas YAML**, **guías** y otros materiales útiles para gestionar aplicaciones en Kubernetes. 
+- Este repositorio está diseñado para ser un conjunto de recursos generales que pueden ser utilizados para **desplegar**, **configurar**, **monitorizar** y **administrar** clústeres de Kubernetes en cualquier entorno, sin depender de un proveedor específico como AWS.
 
-Este repositorio contiene una serie de **scripts**, **manifiestos**, **documentación** y otros recursos relacionados con la administración, configuración y automatización de tareas en **Kubernetes**.
+## Propósito
+El propósito de este repositorio es proporcionar recursos reutilizables y fáciles de entender que faciliten la interacción con Kubernetes. Estos recursos están destinados a ayudar tanto a desarrolladores como a administradores de sistemas a realizar tareas comunes en Kubernetes, como:
+- Despliegue de aplicaciones y servicios.
+- Escalado y gestión de aplicaciones.
+- Configuración de redes y almacenamiento.
+- Mejores prácticas de seguridad.
+- Integración con herramientas de monitoreo y logging.
 
 ## Contenido
-
 Este repositorio se organiza en las siguientes carpetas:
 
 - **`docs/`**: Documentación y guías para trabajar con Kubernetes.
-- **`scripts/`**: Scripts útiles para la automatización de tareas como despliegue, mantenimiento y gestión del clúster.
-- **`manifests/`**: Manifiestos YAML para desplegar aplicaciones y recursos en Kubernetes.
-- **`charts/`**: Helm charts para facilitar el despliegue de aplicaciones en Kubernetes.
-- **`ci-cd/`**: Archivos y configuraciones para pipelines de integración y despliegue continuo.
+- **`scripts/`**: Scripts para automatizar tareas comunes en Kubernetes (instalación, despliegue, monitoreo, etc.).
+- **`manifests/`**: Manifiestos YAML para definir recursos de Kubernetes como Pods, Deployments, Services, etc.
+- **`charts/`**: Helm charts para gestionar aplicaciones complejas en Kubernetes.
+- **`ci-cd/`**:  Configuraciones para integrar Kubernetes con pipelines de CI/CD.
