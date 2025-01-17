@@ -65,5 +65,5 @@ Kubernetes proporciona varias ventajas a los desarrolladores:
 - Desarrollo y pruebas simplificados: Puedes crear entornos de desarrollo y pruebas similares a producción, facilitando el trabajo en equipo y la integración continua.
 
 ## Conclusión
-Kubernetes es una plataforma poderosa y flexible para gestionar aplicaciones en contenedores. Con su capacidad para automatizar el despliegue, escalado y gestión de aplicaciones, Kubernetes se ha convertido en un estándar de facto para empresas que buscan optimizar sus entornos de producción, ya sea en la nube, en servidores locales o en entornos híbridos.
-Con el tiempo, Kubernetes se ha expandido más allá de ser solo una herramienta de orquestación para convertirse en una plataforma completa para la gestión de aplicaciones distribuidas, haciendo que sea una herramienta esencial en la moderna infraestructura de TI.
+- Kubernetes es una plataforma poderosa y flexible para gestionar aplicaciones en contenedores. Con su capacidad para automatizar el despliegue, escalado y gestión de aplicaciones, Kubernetes se ha convertido en un estándar de facto para empresas que buscan optimizar sus entornos de producción, ya sea en la nube, en servidores locales o en entornos híbridos.
+- Con el tiempo, Kubernetes se ha expandido más allá de ser solo una herramienta de orquestación para convertirse en una plataforma completa para la gestión de aplicaciones distribuidas, haciendo que sea una herramienta esencial en la moderna infraestructura de TI.
