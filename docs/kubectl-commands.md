@@ -10,7 +10,7 @@ Este archivo contiene una lista organizada de comandos útiles de **kubectl** pa
 - [Comandos de Depuración](#comandos-de-depuración)
 - [Operación Diaria](#operación-diaria)
 - [Troubleshooting Diagnóstico y Resolución de Problemas)](#troubleshooting-diagnóstico-y-resolución-de-problemas)
-- [Eliminar Recursos del Cluster](#eiminar-recursos-del-cluster)
+- [Eliminar Recursos del Cluster](#eliminar-recursos-del-cluster)
 - [](#)
 - [](#)
 
