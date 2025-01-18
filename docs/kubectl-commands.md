@@ -38,14 +38,53 @@ Este archivo contiene una lista organizada de comandos útiles de **kubectl** pa
 
 ## Gestión de Recursos de Kubernetes
 ### Crear y gestionar namespaces
-- `kubectl create namespace <namespace-name>` Crear un nuevo namespace
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
-- ``
+- `kubectl create namespace <namespace-name>` *(Crear un nuevo namespace)*
+- `kubectl get namespaces` *(Listar todos los namespaces)*
+- `kubectl config set-context --current --namespace=<namespace-name>` *(Cambiar el contexto a un namespace específico)*
+### ConfigMaps y Secrets
+- `kubectl create configmap <configmap-name> --from-file=<path-to-file>` *(Crear un ConfigMap desde un archivo)*
+- `kubectl create secret generic <secret-name> --from-file=<path-to-file>` *(Crear un Secret desde un archivo)*
+- `kubectl get configmap <configmap-name> -o yaml` *(Ver un ConfigMap)*
+- `kubectl get secret <secret-name> -o yaml)` *(Ver un Secret (debidamente codificado))*
 
+## Comandos de Servicios y Networking
+### Exponer un recurso
+- `kubectl expose pod <pod-name> --type=ClusterIP --name=<service-name>` *(Crear un servicio de tipo ClusterIP (por defecto))*
+- `kubectl expose pod <pod-name> --type=LoadBalancer --name=<service-name>` *(Crear un servicio de tipo LoadBalancer (si es compatible con el entorno))*
+- `kubectl expose pod <pod-name> --type=NodePort --name=<service-name>` *(Crear un servicio de tipo NodePort)*
+### Ver servicios expuestos
+- `kubectl get svc` *(Listar servicios en el clúster)*
+- `kubectl describe svc <service-name>` *(Ver un servicio específico)*
+
+## Comandos de Administración y Mantenimiento
+### Actualizar recursos
+- `kubectl set image deployment/<deployment-name> <container-name>=<new-image>` *(Actualizar un Deployment (por ejemplo, para cambiar la imagen del contenedor))*
+- `kubectl apply -f <archivo.yaml>` *(Aplicar un manifiesto de configuración actualizado)*
+- `kubectl rollout restart deployment <deployment-name>` *(Forzar la actualización de un pod dentro de un deployment)*
+### Eliminar recursos
+- `kubectl delete <resource-type> <resource-name>` *(Eliminar un pod, deployment o servicio)*
+- `kubectl delete all --all -n <namespace-name>` *(Eliminar todos los recursos de un namespace)*
+### Inspeccionar el estado de los recursos
+- `kubectl get pods` *(Ver el estado de los pods)*
+- `kubectl get deployments` *(Ver el estado de los deployments)*
+- `kubectl get services` *(Ver el estado de los services)*
+- `kubectl get events` *(Ver eventos en el clúster)*
+### Ver la configuración del clúster
+- `kubectl config view` *(Obtener la configuración actual de Kubernetes)*
+
+## Comandos de Depuración
+### Diagnóstico
+- `kubectl describe pod <pod-name>` *(Ver el estado de un pod)*
+- `kubectl get nodes` *(Obtener información del clúster y los nodos)*
+- `kubectl logs <pod-name>` *(Ver los logs de un pod)*
+- `kubectl logs -l app=<app-name>` *(Ver los logs de todos los pods (útil para debug de errores en múltiples pods))*
+- `` *()*
+- `` *()*
+- `` *()*
+- `` *()*
+- `` *()*
+
+## Recomendaciones
+- Puedes usar el flag `-n <namespace>` para especificar un namespace en muchos comandos, si no se especifica, se usará el namespace `default`.
+- Utiliza el flag `-o wide` para obtener más detalles sobre los recursos al usar comandos como `kubectl get`.
+- La opción `-f <file>` te permite trabajar con archivos YAML para definir o actualizar recursos.
