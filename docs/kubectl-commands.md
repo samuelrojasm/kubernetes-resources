@@ -4,5 +4,7 @@ Este archivo contiene una lista de comandos útiles de kubectl que puedes utiliz
 ## Comandos Básicos
 ### Obtener información del clúster
 - `kubectl cluster-info` Ver detalles del clúster
-- Obtener información sobre los nodos del clúster:
-`kubectl get nodes`
+- `kubectl get nodes` Obtener información sobre los nodos del clúster
+
+```bash
+kubectl cluster-info
