@@ -128,9 +128,7 @@ Cuando ya no se necesita un clúster de Kubernetes o se necesita destruir el ent
 - `kubectl delete svc <service-name>` *(Eliminar un servicio)*
 - `kubectl delete all --all -n <namespace-name>` *(Eliminar todos los recursos en un namespace)*
 
-
 ## Recomendaciones
 - Es posible usar el flag `-n <namespace>` para especificar un namespace en muchos comandos, si no se especifica, se usará el namespace `default`.
 - Utilizar el flag `-o wide` para obtener más detalles sobre los recursos al usar comandos como `kubectl get`.
 - La opción `-f <file>` permite trabajar con archivos YAML para definir o actualizar recursos.
-
