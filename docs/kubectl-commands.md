@@ -3,7 +3,15 @@ Este archivo contiene una lista organizada de comandos útiles de **kubectl** pa
 
 ## Categorías
 [1. Comandos Básicos](#comandos-básicos)
-[1. Comandos de Gestión de Pods y Contenedores](#comandos-de-gestión-de-pods-y-contenedores)
+[2. Comandos de Gestión de Pods y Contenedores](#comandos-de-gestión-de-pods-y-contenedores)
+[3. Gestión de Recursos de Kubernetes](#gestión-de-recursos-de-Kubernetes)
+[3. ](#)
+[3. ](#)
+[3. ](#)
+[3. ](#)
+[3. ](#)
+[3. ](#)
+[3. ](#)
 Gestión de Recursos de Kubernetes
 
 
