@@ -53,7 +53,7 @@ Este archivo contiene una lista organizada de comandos útiles de **kubectl** pa
 - `kubectl create configmap <configmap-name> --from-file=<path-to-file>` *(Crear un ConfigMap desde un archivo)*
 - `kubectl create secret generic <secret-name> --from-file=<path-to-file>` *(Crear un Secret desde un archivo)*
 - `kubectl get configmap <configmap-name> -o yaml` *(Ver un ConfigMap)*
-- `kubectl get configmap <configmap-name> -o wide` *(Ver un ConfigMap)*
+- `kubectl get configmap <configmap-name> -o wide` *(Ver un ConfigMap con más detalles)*
 - `kubectl get secret <secret-name> -o yaml` *(Ver un Secret (debidamente codificado))*
 
 ## Comandos de Servicios y Networking
