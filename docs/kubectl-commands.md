@@ -2,9 +2,9 @@
 Este archivo contiene una lista organizada de comandos útiles de **kubectl** para gestionar un clúster de Kubernetes en diferentes etapas del ciclo de vida del clúster. Los comandos están categorizados para facilitar su uso.
 
 ## Categorías
-1. [Comandos Básicos](#comandos-básicos)
-2. [Comandos de Gestión de Pods y Contenedores](#comandos-de-gestión-de-pods-y-contenedores)
-
+1. [1. Comandos Básicos](#comandos-básicos)
+2. [2. Comandos de Gestión de Pods y Contenedores](#comandos-de-gestión-de-pods-y-contenedores)
+Gestión de Recursos de Kubernetes
 
 
 ## Comandos Básicos
@@ -78,6 +78,31 @@ Este archivo contiene una lista organizada de comandos útiles de **kubectl** pa
 - `kubectl get nodes` *(Obtener información del clúster y los nodos)*
 - `kubectl logs <pod-name>` *(Ver los logs de un pod)*
 - `kubectl logs -l app=<app-name>` *(Ver los logs de todos los pods (útil para debug de errores en múltiples pods))*
+
+## Operación Diaria
+Una vez que un clúster está en funcionamiento, esta categoría incluye comandos para gestionar el clúster, sus recursos, y realizar tareas diarias de mantenimiento y monitoreo.
+### Gestionar Recursos de Kubernetes
+- `kubectl get pods --all-namespaces` *(Ver los pods en todos los namespaces)*
+- `kubectl apply -f deployment.yaml` *(Desplegar una nueva aplicación usando un archivo YAML)*
+- `kubectl scale deployment <deployment-name> --replicas=3` *(Escalar un Deployment)*
+- `kubectl logs <pod-name>` *(Ver los logs de un pod)*
+- `kubectl expose pod <pod-name> --type=LoadBalancer --name=<service-name>` *(Crear un servicio para exponer un pod)*
+### Actualización y Mantenimiento de Recursos
+- `kubectl set image deployment/<deployment-name> <container-name>=<new-image>` *(Actualizar la imagen de un contenedor en un Deployment)*
+- `kubectl rollout restart deployment <deployment-name>` *(Reiniciar un Deployment)*
+- `kubectl rollout status deployment/<deployment-name>` *(Ver el estado del despliegue)*
+- `kubectl get all` *(Obtener el estado de los recursos en el clúster)*
+### Configuración de RBAC
+- `kubectl get roles --all-namespaces` *(Ver roles en el clúster)*
+- `kubectl get rolebindings --all-namespaces` *(Ver bindings en el clúster)*
+
+## Troubleshooting (Diagnóstico y Resolución de Problemas)
+Esta categoría incluye los comandos para diagnosticar y resolver problemas en un clúster de Kubernetes.
+### Diagnóstico de Pods y Recursos
+- `kubectl describe pod <pod-name>` *(Describir un pod y obtener información detallada)*
+- `kubectl logs -f <pod-name>` *(Ver los logs de un contenedor en tiempo real)*
+- `kubectl get events` *(Ver eventos del clúster)*
+- `kubectl get pods --field-selector=status.phase!=Running` *(Comprobar la salud de los recursos)*
 - `` *()*
 - `` *()*
 - `` *()*
