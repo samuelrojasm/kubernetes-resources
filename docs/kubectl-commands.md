@@ -9,8 +9,8 @@ Este archivo contiene una lista organizada de comandos útiles de **kubectl** pa
 
 ## Comandos Básicos
 ### Obtener información del clúster
-- `kubectl cluster-info` (Ver detalles del clúster)
-- `kubectl get nodes` (Obtener información sobre los nodos del clúster)
+- `kubectl cluster-info` *(Ver detalles del clúster)*
+- `kubectl get nodes` *(Obtener información sobre los nodos del clúster)*
 - `kubectl describe nodes` Obtener información detallada de los nodos 
 ### Ver recursos en el clúster
 - `kubectl get pods --all-namespaces` Listar todos los pods en el clúster
