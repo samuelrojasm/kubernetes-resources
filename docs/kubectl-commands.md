@@ -11,8 +11,6 @@ Este archivo contiene una lista organizada de comandos útiles de **kubectl** pa
 - [Operación Diaria](#operación-diaria)
 - [Troubleshooting Diagnóstico y Resolución de Problemas)](#troubleshooting-diagnóstico-y-resolución-de-problemas)
 - [Eliminar Recursos del Cluster](#eliminar-recursos-del-cluster)
-- [](#)
-- [](#)
 
 ## Comandos Básicos
 ### Obtener información del clúster
@@ -21,9 +19,12 @@ Este archivo contiene una lista organizada de comandos útiles de **kubectl** pa
 - `kubectl describe nodes` *(Obtener información detallada de los nodos)*
 ### Ver recursos en el clúster
 - `kubectl get pods --all-namespaces` *(Listar todos los pods en el clúster)*
+- `kubectl get pods -n <namespace>` *(Listar todos los pods de un espacio de nombres específico)*
+- `kubectl get pods -o wide` *(Listar más detalles de los pods)*
 - `kubectl get services` *(Listar los servicios en el clúster)*
 - `kubectl get deployments` *(Ver los deployments activos)*
 - `kubectl get all -n <namespace>` *(Ver los recursos de un espacio de nombres específico)*
+- `kubectl get all | grep <dato_nombre_recurso>` *(Ver un recurso específico)*
 ### Detalles de un recurso específico
 - `kubectl describe pod <pod-name>` *(Describir un pod específico)*
 - `kubectl describe service <service-name>` *(Describir un servicio específico)*
@@ -52,7 +53,8 @@ Este archivo contiene una lista organizada de comandos útiles de **kubectl** pa
 - `kubectl create configmap <configmap-name> --from-file=<path-to-file>` *(Crear un ConfigMap desde un archivo)*
 - `kubectl create secret generic <secret-name> --from-file=<path-to-file>` *(Crear un Secret desde un archivo)*
 - `kubectl get configmap <configmap-name> -o yaml` *(Ver un ConfigMap)*
-- `kubectl get secret <secret-name> -o yaml)` *(Ver un Secret (debidamente codificado))*
+- `kubectl get configmap <configmap-name> -o wide` *(Ver un ConfigMap)*
+- `kubectl get secret <secret-name> -o yaml` *(Ver un Secret (debidamente codificado))*
 
 ## Comandos de Servicios y Networking
 ### Exponer un recurso
