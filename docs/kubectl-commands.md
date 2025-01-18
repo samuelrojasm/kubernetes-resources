@@ -2,8 +2,8 @@
 Este archivo contiene una lista organizada de comandos útiles de **kubectl** para gestionar un clúster de Kubernetes en diferentes etapas del ciclo de vida del clúster. Los comandos están categorizados para facilitar su uso.
 
 ## Categorías
-[1. Comandos Básicos](#comandos-básicos)
-[2. Comandos de Gestión de Pods y Contenedores](#comandos-de-gestión-de-pods-y-contenedores)
+1. [1. Comandos Básicos](#comandos-básicos)
+1. [2. Comandos de Gestión de Pods y Contenedores](#comandos-de-gestión-de-pods-y-contenedores)
 [3. Gestión de Recursos de Kubernetes](#gestión-de-recursos-de-Kubernetes)
 [3. ](#)
 [3. ](#)
