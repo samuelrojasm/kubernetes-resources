@@ -2,18 +2,17 @@
 Este archivo contiene una lista organizada de comandos útiles de **kubectl** para gestionar un clúster de Kubernetes en diferentes etapas del ciclo de vida del clúster. Los comandos están categorizados para facilitar su uso.
 
 ## Categorías
-1. [1. Comandos Básicos](#comandos-básicos)
-1. [2. Comandos de Gestión de Pods y Contenedores](#comandos-de-gestión-de-pods-y-contenedores)
-[3. Gestión de Recursos de Kubernetes](#gestión-de-recursos-de-Kubernetes)
-[3. ](#)
-[3. ](#)
-[3. ](#)
-[3. ](#)
-[3. ](#)
-[3. ](#)
-[3. ](#)
-Gestión de Recursos de Kubernetes
-
+- [Comandos Básicos](#comandos-básicos)
+- [Comandos de Gestión de Pods y Contenedores](#comandos-de-gestión-de-pods-y-contenedores)
+- [Gestión de Recursos de Kubernetes](#gestión-de-recursos-de-kubernetes)
+- [Comandos de Servicios y Networking](#comandos-de-servicios-y-networking)
+- [Comandos de Administración y Mantenimiento](#comandos_de_administración_y_mantenimiento)
+- [Comandos de Depuración](#comandos_de_depuración)
+- [Operación Diaria](#operación_diaria)
+- [Troubleshooting (Diagnóstico y Resolución de Problemas)](#troubleshooting_(diagnóstico_y_resolución_de_problemas))
+- [Eliminar Recursos](#eliminar_recursos)
+- [](#)
+- [](#)
 
 ## Comandos Básicos
 ### Obtener información del clúster
@@ -111,11 +110,22 @@ Esta categoría incluye los comandos para diagnosticar y resolver problemas en u
 - `kubectl logs -f <pod-name>` *(Ver los logs de un contenedor en tiempo real)*
 - `kubectl get events` *(Ver eventos del clúster)*
 - `kubectl get pods --field-selector=status.phase!=Running` *(Comprobar la salud de los recursos)*
-- `` *()*
-- `` *()*
-- `` *()*
-- `` *()*
-- `` *()*
+### Solución de Problemas de Red
+- `kubectl get svc` *(Ver los servicios en el clúster)*
+- `kubectl describe svc <service-name>` *(Ver detalles de un servicio)*
+- `kubectl exec -it <pod-name> -- /bin/bash` *(Ejecutar un comando dentro de un pod para diagnóstico)*
+### Solucionar Problemas de Conectividad
+- `kubectl exec -it <pod-name> -- ping <target-ip>` *(Comprobar la conectividad de un pod (ejemplo con ping))*
+- `kubectl top pod` *(Ver las métricas de los pods (si esta configurado Prometheus o Metrics Server))*
+
+## Eliminar Recursos
+Cuando ya no se necesita un clúster de Kubernetes o se necesita destruir el entorno por completo, estos son los comandos que se pueden usar para eliminar recursos y destruir el clúster.
+### Borrado de Recursos
+- `kubectl delete pod <pod-name>` *(Eliminar un pod específico)*
+- `kubectl delete deployment <deployment-name>` *(Eliminar un Deployment)*
+- `kubectl delete svc <service-name>` *(Eliminar un servicio)*
+- `kubectl delete all --all -n <namespace-name>` *(Eliminar todos los recursos en un namespace)*
+
 
 ## Recomendaciones
 - Es posible usar el flag `-n <namespace>` para especificar un namespace en muchos comandos, si no se especifica, se usará el namespace `default`.
