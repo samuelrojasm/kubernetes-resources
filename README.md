@@ -11,6 +11,12 @@ El propósito de este repositorio es proporcionar recursos reutilizables y fáci
 - Integración con herramientas de monitoreo y logging.
 
 ## Contenido
+- [Kubernetes: Introducción](https://github.com/samuelrojasm/kubernetes-resources/blob/main/docs/kubernetes_intro.md)
+- [Mejores prácticas de Kubernetes](https://github.com/samuelrojasm/kubernetes-resources/blob/main/docs/best_practices.md)
+- [Comandos de kubectl](https://github.com/samuelrojasm/kubernetes-resources/blob/main/docs/kubectl-commands.md)
+- [Herramientas para Kubernetes](https://github.com/samuelrojasm/kubernetes-resources/blob/main/docs/tools-commands.md)
+
+## Estructura
 Este repositorio se organiza en las siguientes carpetas:
 
 - **`docs/`**: Documentación y guías para trabajar con Kubernetes.
